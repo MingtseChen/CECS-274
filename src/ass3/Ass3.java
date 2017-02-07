@@ -9,9 +9,6 @@ import java.io.*;
 
 public class Ass3 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         //
         ArrayList <Integer> _gList = new ArrayList <Integer> ();
@@ -20,43 +17,45 @@ public class Ass3 {
         PopulateGrade(_gList);
         //start
         Scanner in =new Scanner(System.in);
-        //String getChoice;
-        //int _Choice;
+        String getChoice;
+        boolean flag = true;
         do{
             System.out.print("\n===========================================\nStatistical Analysis\n");
             System.out.print("1.Display Unsorted Grades\n2.Display Sorted Grades\n3.Display Sum of Grades\n4.Display Average Grade\n5.Display Max Grade\n6.Display Median Grade\n7.Display Mode\n8.Quit\n");
             System.out.print("===========================================\n");
             //getChoice = in.next();
-            int _Choice = Integer.parseInt(in.next());
-            
-            if(_Choice == 8) break;
-            switch(_Choice){
-                case 1:
+            //int _Choice = Integer.parseInt(in.next());
+            getChoice = in.next();
+            if(getChoice.equals("8")) flag = false;
+            switch(getChoice){
+                case "1":
                    DisplayGrade(_gList);
                    break;
-                case 2:
+                case "2":
                     DisplayGrade(SortList(_gList));
                      break;
-                case 3:
+                case "3":
                     System.out.print(SumGrade(_gList));
                     break;
-                case 4:
+                case "4":
                     System.out.print(avg = SumGrade(_gList)/_gList.size());
                     break;
-                case 5:
+                case "5":
                     System.out.print(FindMax(_gList));
                     break;
-                case 6:
+                case "6":
                     System.out.print(FindMedian(_gList));
                     break;
-                case 7:
+                case "7":
                     FindMod(_gList);
                     break;
-                case 8:
+                case "8":
                     break;
                 default:
+                    System.out.print("Invalid Input type");
+                    break;
             }
-        }while(true);
+        }while(flag);
     }
     public static void PopulateGrade(ArrayList list){
         try{
