@@ -115,25 +115,20 @@ public class Ass3 {
     }
     public static void FindMod(ArrayList list){
         ArrayList <Integer> Mod = new ArrayList <Integer> ();
-        //int Threshold = 0;
         int currentHold;
         int tmp = 1;
         int MaxCount =0;
-        //int MaxNum = 0;
-        int mCounter = 0;
-        //int M_NBuffer=0;
         for(int i = 0; i < SortList(list).size(); i++){
             tmp = 1;
             currentHold = (int)SortList(list).get(i);
             for( int j= i +1; j< SortList(list).size(); j++){
                 if(currentHold == (int)SortList(list).get(j)){
                     tmp += 1;
-                    mCounter = tmp;
+                    //mCounter = tmp;
                 }
                 else{
                     //locate the nex int
                     i = j-1;
-                    mCounter = tmp; 
                     System.out.print("Counter :"+tmp+"\n");
                     if(MaxCount<tmp){
                         //MaxNum = currentHold;
@@ -144,14 +139,10 @@ public class Ass3 {
                         //System.out.print("Find\n");
                     }
                     else if(MaxCount == tmp)
-                        if(mCounter == MaxCount){
                             Mod.add(currentHold);
                             //System.out.print("Same\n");
                             System.out.print(currentHold+"Saved\n");
-                        }
-                        //trigger input to list
-                        
-                        
+                    //trigger input to list
                     //clear list when find a larger num
                     //if(MaxCount)
                     break;
