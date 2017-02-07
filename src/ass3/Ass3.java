@@ -124,35 +124,29 @@ public class Ass3 {
             for( int j= i +1; j< SortList(list).size(); j++){
                 if(currentHold == (int)SortList(list).get(j)){
                     tmp += 1;
-                    //mCounter = tmp;
                 }
                 else{
                     //locate the nex int
                     i = j-1;
-                    System.out.print("Counter :"+tmp+"\n");
+                    //System.out.print("Temp :"+tmp+"\n");
                     if(MaxCount<tmp){
                         //MaxNum = currentHold;
                         MaxCount = tmp;
-                        System.out.print("Cleaned\n");
                         Mod.clear();
-                        //System.out.print("Cleaned\n");
-                        //System.out.print("Find\n");
                     }
-                    else if(MaxCount == tmp)
+                    if(MaxCount == tmp)
                             Mod.add(currentHold);
                             //System.out.print("Same\n");
-                            System.out.print(currentHold+"Saved\n");
+                            //System.out.print(currentHold+" Saved !\n");
                     //trigger input to list
                     //clear list when find a larger num
-                    //if(MaxCount)
                     break;
                 }
             }
-            System.out.print("currentHold :"+currentHold+"\n");
+            //System.out.print("currentHold :"+currentHold+"\n");
+            //System.out.print("\n============================================\n");
         }
         //locating the max num count (MaxCount)
-        //System.out.print(MaxCount+"\n");
-       // System.out.print(MaxNum+"\n");
         DisplayGrade(Mod);
     }
 }
