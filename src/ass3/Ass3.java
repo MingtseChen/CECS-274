@@ -23,8 +23,6 @@ public class Ass3 {
             System.out.print("\n===========================================\nStatistical Analysis\n");
             System.out.print("1.Display Unsorted Grades\n2.Display Sorted Grades\n3.Display Sum of Grades\n4.Display Average Grade\n5.Display Max Grade\n6.Display Median Grade\n7.Display Mode\n8.Quit\n");
             System.out.print("===========================================\n");
-            //getChoice = in.next();
-            //int _Choice = Integer.parseInt(in.next());
             getChoice = in.next();
             if(getChoice.equals("8")) flag = false;
             switch(getChoice){
