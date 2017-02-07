@@ -20,15 +20,17 @@ public class Ass3 {
         PopulateGrade(_gList);
         //start
         Scanner in =new Scanner(System.in);
-        int getChoice;
+        //String getChoice;
+        //int _Choice;
         do{
             System.out.print("\n===========================================\nStatistical Analysis\n");
             System.out.print("1.Display Unsorted Grades\n2.Display Sorted Grades\n3.Display Sum of Grades\n4.Display Average Grade\n5.Display Max Grade\n6.Display Median Grade\n7.Display Mode\n8.Quit\n");
             System.out.print("===========================================\n");
-            getChoice = in.nextInt();
+            //getChoice = in.next();
+            int _Choice = Integer.parseInt(in.next());
             
-            if(getChoice == 8) break;
-            switch(getChoice){
+            if(_Choice == 8) break;
+            switch(_Choice){
                 case 1:
                    DisplayGrade(_gList);
                    break;
@@ -135,12 +137,12 @@ public class Ass3 {
                         Mod.clear();
                     }
                     if(MaxCount == tmp)
-                            Mod.add(currentHold);
+                        Mod.add(currentHold);
                             //System.out.print("Same\n");
                             //System.out.print(currentHold+" Saved !\n");
                     //trigger input to list
                     //clear list when find a larger num
-                    break;
+                        break;
                 }
             }
             //System.out.print("currentHold :"+currentHold+"\n");
