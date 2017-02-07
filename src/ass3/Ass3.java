@@ -115,6 +115,8 @@ public class Ass3 {
             return (int)SortList(list).get((((SortList(list).size() / 2) + 1) + (SortList(list).size() / 2)) / 2 );
     }
     public static void FindMod(ArrayList list){
+        
+        //complete checked
         ArrayList <Integer> Mod = new ArrayList <Integer> ();
         int currentHold;
         int tmp = 1;
@@ -130,19 +132,16 @@ public class Ass3 {
                     //locate the nex int
                     i = j-1;
                     //System.out.print("Temp :"+tmp+"\n");
-                    if(MaxCount<tmp){
-                        //MaxNum = currentHold;
-                        MaxCount = tmp;
-                        Mod.clear();
-                    }
-                    if(MaxCount == tmp)
-                        Mod.add(currentHold);
-                            //System.out.print("Same\n");
-                            //System.out.print(currentHold+" Saved !\n");
-                    //trigger input to list
-                    //clear list when find a larger num
-                        break;
+                    break;
                 }
+                //trigger input to list
+                //clear list when find a larger num
+                if(MaxCount<tmp){
+                    MaxCount = tmp;
+                    Mod.clear();
+                }
+                if(MaxCount == tmp)
+                    Mod.add(currentHold);
             }
             //System.out.print("currentHold :"+currentHold+"\n");
             //System.out.print("\n============================================\n");
